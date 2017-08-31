@@ -1,20 +1,10 @@
-Checking Your Answer on Mac/Linux:
+Checking Your Answer
 
   Execute the following command from inside the main clmystery directory, replacing "John Doe" with your suspect's name:
 
   ./check "John Doe"
 
-Checking Your Answer on Windows:
-
-  Execute the following command from inside the main clmystery directory, replacing "John Doe" with your suspect's name:
-
-  echo "John Doe" | md5
-
-  This will print out a long sequence of numbers and letters. Execute the following command, replacing "My Sequence" with the output from the previous command:
-
-  grep -qi "My Sequence" encoded && echo CORRECT\! GREAT WORK, GUMSHOE. || echo SORRY, TRY AGAIN.
-
-Seeing The Answer:
+Giving Up
 
   To give up and view the correct answer, execute the following command from inside the main clmystery directory:
 
