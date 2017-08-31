@@ -306,7 +306,7 @@ If you just want to print out the entire contents of a file into your terminal, 
 
 If you want to get serious and open a file in a text editor, you can try `atom`:
 
-  /files $ atom address.txt
+  /files $ nano address.txt
 
 How many lines are in names.txt?
 
