@@ -55,9 +55,6 @@ The `less` command will print the contents of the `cheatsheet` file to the Termi
 - Press the F and B keys to scroll one page at a time.
 - Press the Q key to quit and return to the shell.
 
-### Credits
+#### Credits
 
-Created by Noah Veltman
-Projects: [noahveltman.com](http://noahveltman.com)  
-GitHub: [veltman](https://github.com/veltman)  
-Twitter: [@veltman](https://twitter.com/veltman)  
+Created by [Noah Veltman](https://github.com/veltman)
