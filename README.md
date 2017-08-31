@@ -1,5 +1,5 @@
-The Command Line Murders
-========================
+The Command Line Murder Mystery
+===============================
 
 	.OOOOOOOOOOOOOOO @@                                   @@ OOOOOOOOOOOOOOOO.
 	OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO
@@ -12,8 +12,8 @@ The Command Line Murders
 	OOOOOOOOOOOOOOOOOO @          THE                          |OOOOOOOOOOOOOI
 	OOOOOOOOOOOOOOOOO'@           COMMAND                      OOOOOOOOOOOOOOb
 	OOOOOOOOOOOOOOO'a'            LINE                         |OOOOOOOOOOOOOy
-	OOOOOOOOOOOOOO''              MURDERS                      aa`OOOOOOOOOOOP
-	OOOOOOOOOOOOOOb,..                                          `@aa``OOOOOOOh
+	OOOOOOOOOOOOOO''              MURDER                       aa`OOOOOOOOOOOP
+	OOOOOOOOOOOOOOb,..            MYSTERY                       `@aa``OOOOOOOh
 	OOOOOOOOOOOOOOOOOOo                                           `@@@aa OOOOo
 	OOOOOOOOOOOOOOOOOOO|                                             @@@ OOOOe
 	OOOOOOOOOOOOOOOOOOO@                               aaaaaaa       @@',OOOOn
@@ -25,27 +25,39 @@ The Command Line Murders
 	`OOOO'       `@    aa@@       aaa"""          @a        a@     a@@@',OOOO'
 
 
-There's been a murder in Terminal City, and TCPD needs your help.
+There's been a murder in Terminal City and the TCPD needs your help to figure out who-done-it.
 
-To figure out whodunit, you need access to a command line.
+To get started, change the working directory of your shell to your `~/Projects/week01` directory.
 
-Once you're ready, clone this repo, or [download it as a zip file](https://github.com/veltman/clmystery/archive/master.zip).
+	cd ~/Projects/week01
 
-Open a Terminal, go to the location of the files, and start by reading the file 'instructions'.
+Clone this repository from GitHub to your laptop:
 
-One way you can do this is with the command:
+	git clone https://github.com/ryansobol/clmystery.git
+
+Change the working directory of your shell to the `clmystery` directory:
+
+	cd clmystery
+
+And read through the `instructions` file:
 
 	cat instructions
 
-(`cat` is a command that will print the contents of the file called `instructions` for you to read.)
+The `cat` command will print the entire contents of the `instructions` file to the Terminal.
 
-To get started on how to use the command line, you can type 'atom cheatsheet.md' from the command line.
+Refer to the `cheatsheet` file for a refresher on core Unix concepts:
 
-Don't use a text editor to view any files except these instructions, the cheatsheet, and hints.
+	less cheatsheet
+
+The `less` command will print the contents of the `cheatsheet` file to the Terminal one page at a time. When working in `less`:
+
+- Press the Up and Down arrow keys to scroll one line at a time.
+- Press the F and B keys to scroll one page at a time.
+- Press the Q key to quit and return to the shell.
 
 ### Credits
 
-By Noah Veltman  
+Created by Noah Veltman
 Projects: [noahveltman.com](http://noahveltman.com)  
 GitHub: [veltman](https://github.com/veltman)  
 Twitter: [@veltman](https://twitter.com/veltman)  

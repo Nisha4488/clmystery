@@ -1,11 +1,3 @@
-Checking Your Answer
-
-  Execute the following command from inside the main clmystery directory, replacing "John Doe" with your suspect's name:
+Execute the following command from inside the 'clmystery' directory, replacing "John Doe" with your suspect's name:
 
   ./check "John Doe"
-
-Giving Up
-
-  To give up and view the correct answer, execute the following command from inside the main clmystery directory:
-
-  ./giveup
