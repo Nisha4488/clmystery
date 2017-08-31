@@ -60,7 +60,8 @@ To print out the matching line, the 4 lines BEFORE it and the 4 lines AFTER it
 
   grep -C 4 "Howard" famousducks.txt
 
-To search for "McDuck" in every file in the current directory, use the `*` wildcard in the path.
+To search for "McDuck" in every file in the current directory, use the `*`
+wildcard in the path.
 
   grep "McDuck" *
 
