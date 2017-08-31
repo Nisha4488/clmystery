@@ -351,11 +351,3 @@ Example:
   /files $ head -n 5 temporaryfile.txt
   /files $ rm temporaryfile.txt
   (Save everything but the first 7 lines to a temporary file, then print the first 5 lines of that, then delete the temporary file)
-
----
-
-## Questions/Comments/Suggestions ##
-Noah Veltman
-Web: http://noahveltman.com
-Twitter: [@veltman](http://twitter.com/veltman)
-Email: [noah@noahveltman.com](mailto:noah@noahveltman.com)
