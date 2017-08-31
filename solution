@@ -1,3 +1,0 @@
-Execute the following command from inside the 'clmystery' directory, replacing "John Doe" with your suspect's name:
-
-  ./check "John Doe"

@@ -8,4 +8,6 @@ Fortunately, their sergeant went through and marked the real clues with the word
 
 If you get stuck, you can read the 'hint' files, which are ordered from least to most damaging.
 
-When you think you've solved the mystery, read the 'solution' file.
+When you think you've solved the mystery, execute the following command from inside the 'clmystery' directory, replacing "John Doe" with your suspect's name:
+
+  ./check "John Doe"
