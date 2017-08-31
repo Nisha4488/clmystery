@@ -54,7 +54,3 @@ The `less` command will print the contents of the `cheatsheet` file to the Termi
 - Press the Up and Down arrow keys to scroll one line at a time.
 - Press the F and B keys to scroll one page at a time.
 - Press the Q key to quit and return to the shell.
-
-#### Credits
-
-Created by [Noah Veltman](https://github.com/veltman)
