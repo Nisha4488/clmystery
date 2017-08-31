@@ -44,13 +44,3 @@ And read through the `instructions` file:
 	cat instructions
 
 The `cat` command will print the entire contents of the `instructions` file to the Terminal.
-
-Refer to the `cheatsheet` file for a refresher on core Unix concepts:
-
-	less cheatsheet
-
-The `less` command will print the contents of the `cheatsheet` file to the Terminal one page at a time. When working in `less`:
-
-- Press the Up and Down arrow keys to scroll one line at a time.
-- Press the F and B keys to scroll one page at a time.
-- Press the Q key to quit and return to the shell.

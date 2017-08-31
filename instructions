@@ -1,13 +1,31 @@
 Solve this murder mystery using only command line programs.
 
-To figure out who-done-it, go to the 'mystery' subdirectory and start collecting all the clues from the 'crimescene' file.
+To figure out who-done-it, go to the 'mystery' subdirectory and start
+collecting all the clues from the 'crimescene' file.
 
-The officers on the scene were super meticulous and wrote down EVERYTHING in their reports.
+The officers on the scene were super meticulous and wrote down EVERYTHING in
+their reports. Fortunately, their sergeant went through and marked the real
+clues with the word "CLUE" in all caps.
 
-Fortunately, their sergeant went through and marked the real clues with the word "CLUE" in all caps.
+Refer to the `cheatsheet` file for some tips on commands and concepts you may
+find useful:
 
-If you get stuck, you can read the 'hint' files, which are ordered from least to most damaging.
+  less cheatsheet
 
-When you think you've solved the mystery, execute the following command from inside the 'clmystery' directory, replacing "John Doe" with your suspect's name:
+The `less` command will print the contents of the `cheatsheet` file to the
+Terminal one page at a time. When working in `less`:
+
+- Press the Up and Down arrow keys to scroll one line at a time.
+- Press the F and B keys to scroll one page at a time.
+- Press the Q key to quit and return to the shell.
+
+If you get stuck, you can read the files in the `hints` directory, which are
+ordered from least to most damaging.
+
+When you think you've solved the mystery, execute the following command from
+inside the project root (i.e. the 'clmystery' directory), replacing "John Doe"
+with your suspect's name:
 
   ./check "John Doe"
+
+Good luck, detective!
