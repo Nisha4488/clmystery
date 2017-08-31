@@ -33,7 +33,7 @@ The prompt will also show what directory you're currently sitting in.  Whenever 
 
 Specifying a file or directory as a relative path means you are specifying where it sits relative to the directory you're in.  For example, let's say you're in the `videos` subdirectory of the `files` directory.  You'll see this prompt:
 
-	/files/videos$
+	/files/videos $
 
 If you execute a command like `touch newfile.txt`, it will create `newfile.txt` inside the current directory.  Relative paths don't start with a slash.
 
@@ -41,7 +41,7 @@ If you execute a command like `touch newfile.txt`, it will create `newfile.txt` 
 
 Specifying a file or directory as an absolute path means you are specifying where it sits on the computer in absolute terms, starting from the top level.  For example, let's say you're in the `videos` subdirectory of the `files` directory again.
 
-	/files/videos$
+	/files/videos $
 
 If you execute a command like `touch /files/music/newfile.txt`, it will create `newfile.txt` inside a different folder, the `music` subfolder of the `files` folder.  *Absolute paths start with a slash.*
 
@@ -49,18 +49,18 @@ If you use an absolute path, the command will do the same thing no matter what d
 
 So these two commands will have the same result from the `/files/videos` directory:
 
-	/files/videos$ rm video.mp4
+	/files/videos $ rm video.mp4
 	(This will delete the file `video.mp4` from the current directory)
 
-	/files/videos$ rm /files/videos/video.mp4
+	/files/videos $ rm /files/videos/video.mp4
 	(This will delete `video.mp4` from the /files/videos/ directory, which happens to be the current directory)
 
 The same two commands will not have the same result if you are in a different directory:
 
-	/files/text$ rm video.mp4
+	/files/text $ rm video.mp4
 	(This will try to delete the file video.mp4 from the 'text' subdirectory instead, because that's the current directory)
 
-	/files/text$ rm /files/videos/video.mp4
+	/files/text $ rm /files/videos/video.mp4
 	(This will delete the file from the /files/videos/ directory, even though it isn't the current directory)
 
 Remember:
@@ -70,7 +70,7 @@ Remember:
 
 If you're ever unsure of what directory you're in, you can use the `pwd` (Print Working Directory) command to get the absolute path of the current directory.
 
-	~$ pwd
+	~ $ pwd
 	/Users/Noah
 
 File Patterns
@@ -79,13 +79,13 @@ File Patterns
 In most cases when you have to specify a file name or directory name, you can also specify a general **pattern** that might match multiple files.  There are lots of ins and outs with this, but the most basic version is using the asterisk (*), which matches anything.  It's also known as a wildcard.
 
 	Delete any file in the current directory
-	/files$ rm *
+	/files $ rm *
 
 	Delete any file that ends in '.txt'
-	/files$ rm *.txt
+	/files $ rm *.txt
 
 	Delete any file that starts with 'data'
-	/files$ rm data*
+	/files $ rm data*
 
 Navigating
 ----------
@@ -95,47 +95,47 @@ The two core commands for navigating what directory the prompt is in are `cd` an
 `cd` is a command to change the current directory, and must be followed by a directory you want to change to.  You can supply an absolute or relative path.
 
 	This will put you in /files/videos
-	/files$ cd videos
-	/files/videos$
+	/files $ cd videos
+	/files/videos $
 
 	This will put you in /videos, and then the vines subdirectory
-	/files$ cd /videos
-	/videos$ cd vines
-	/videos/vines$
+	/files $ cd /videos
+	/videos $ cd vines
+	/videos/vines $
 
 You can jump multiple levels at once if you want.
 
 	This will put you in /files/videos/short
-	/files$ cd videos/short
+	/files $ cd videos/short
 
 You can use `cd ..` to move up one level to the parent directory.
 
 	This will put you in /files
-	/files/videos$ cd ..
+	/files/videos $ cd ..
 
 `ls` will list the files in the current directory.  It's helpful for figuring out where you are, what files exist, and what subfolders exist.
 
-	/photos$ ls
+	/photos $ ls
 	thumbnails  photo1.jpg  photo2.jpg
 
 Using `ls -l` will print the list vertically, with lots of other extra information about the file size, permissions, and last modified date:
 
-	/photos$ ls -l
+	/photos $ ls -l
 	-rw-rw-r-- 1 noah noah 58133 Oct 22 17:13 photo1.jpg
 	-rw-rw-r-- 1 noah noah 75640 Oct 22 17:13 photo2.jpg
 	drwxrwxr-x 2 noah noah 4096  Oct 22 17:13 thumbnails
 
 When typing in a directory or file name, you can hit the 'Tab' key to autocomplete if it's possible.  For example, in the /photos folder, if you type in:
 
-	/photos$ cd thu
+	/photos $ cd thu
 
 and hit 'Tab,' it will fill in the rest and show you:
 
-	/photos$ cd thumbnails
+	/photos $ cd thumbnails
 
 However, if there is more than possible file/directory that matches what you've typed so far, it won't work.  If you type:
 
-	/photos$ rm pho
+	/photos $ rm pho
 
 and hit 'Tab,' nothing will happen because you could be on your way to `photo1.jpg` OR `photo2.jpg`.
 
@@ -144,7 +144,7 @@ Command Output
 
 The commands we're going to talk about all output their results as text.  When you execute the command by hitting 'Enter', it will print out a bunch of output on extra lines below the prompt. For example, `head [file]` will print out the first 10 lines of a file.
 
-	/files$ head names.txt
+	/files $ head names.txt
 	Dan Sinker
 	Erika Owens
 	Noah Veltman
@@ -155,7 +155,7 @@ The commands we're going to talk about all output their results as text.  When y
 	Brian Abelson
 	Manuel Aristaran
 	Stijn Debrouwere
-	/files$
+	/files $
 
 Notice that after it prints out its output, it goes back to giving you a fresh prompt.  Getting the output printed out to you in this fashion is useful if you're just poking around, but often you want to do one of two things: **send the output to a file**, or **send the output to another command as an input**.
 
@@ -163,13 +163,13 @@ Notice that after it prints out its output, it goes back to giving you a fresh p
 
 You can send the output to a new file this way:
 
-	/files$ head names.txt > first10names.txt
+	/files $ head names.txt > first10names.txt
 
 If first10names.txt doesn't exist, it will be created.  If it already exists, it will be overwritten.
 
 You can append the output to the end of an existing file this way:
 
-	/files$ head names.txt >> allnames.txt
+	/files $ head names.txt >> allnames.txt
 
 This will add the output as 10 new lines at the end of allnames.txt.
 
@@ -177,16 +177,16 @@ This will add the output as 10 new lines at the end of allnames.txt.
 
 You can send the output to another command using the pipe symbol (|).  The `grep` command searches through some text for matches (more on this later), so you could do this to get the first 10 lines of a file, and then search for "Steve" within those 10 lines:
 
-	/files$ head names.txt | grep "Steve"
+	/files $ head names.txt | grep "Steve"
 
 This is basically the same as doing this:
 
-	/files$ head names.txt > temporaryfile.txt
-	/files$ grep "Steve" temporaryfile.txt
+	/files $ head names.txt > temporaryfile.txt
+	/files $ grep "Steve" temporaryfile.txt
 
 But instead of first sending the output to a file and then running the second command on that file, you pipe the output directly from the first command into the second.  You can chain as many of these together as you want:
 
-	/files$ grep "United States" addresses.csv | grep "California" | head
+	/files $ grep "United States" addresses.csv | grep "California" | head
 
 This would search the file addresses.csv for lines that contain the phrase "United States", then search the results for lines that contain the word "California", and then print out the first 10 of those matches.
 
@@ -197,11 +197,11 @@ The `grep` command will let you search a file (or multiple files) for a phrase. 
 
 Print out lines that contain the word "darkwing":
 
-	/files$ grep "darkwing" famousducks.txt
+	/files $ grep "darkwing" famousducks.txt
 
 Same as above, but the search is case-insensitive:
 
-	/files$ grep -i "darkwing" famousducks.txt
+	/files $ grep -i "darkwing" famousducks.txt
 
 Find matches for the exact *word* "Donald" in a file - words that contain "Donald," like "McDonald," won't count:
 
@@ -261,15 +261,15 @@ Head
 
 The `head` command will print out the first 10 lines of a file:
 
-	/files$ head names.txt
+	/files $ head names.txt
 
 You can also specify a different number of lines.  This will print out the first 15 lines of a file:
 
-	/files$ head -n 15 names.txt
+	/files $ head -n 15 names.txt
 
 Or, if you want to print all the file but leave out the LAST 15 lines, you can give a negative number:
 
-	/files$ head -n -15 names.txt
+	/files $ head -n -15 names.txt
 
 One of the nice uses of head is to quickly peek inside a large text file to see what's in it without having to wait for a text editor to load it.  This becomes a big deal when you're talking about a 1 GB file!
 
@@ -278,36 +278,36 @@ Tail
 
 The `tail` command is the reverse of head.  It will print out the last 10 lines of a file:
 
-	/files$ tail names.txt
+	/files $ tail names.txt
 
 This will print out the last 15 lines of a file:
 
-	/files$ tail -n 15 names.txt
+	/files $ tail -n 15 names.txt
 
 Or, if you want to print all the file but leave out the FIRST 15 lines, you can add a plus sign:
 
-	/files$ tail -n +15 names.txt
+	/files $ tail -n +15 names.txt
 
 This is helpful if you want to, say, remove a header row from a CSV file:
 
-	/files$ tail -n +1 names.txt > names-no-header.txt
+	/files $ tail -n +1 names.txt > names-no-header.txt
 
 Miscellaneous
 -------------
 
 If you just want to print out the entire contents of a file into your terminal, you can use `cat` and not combine it with anything.  This is sort of against the whole point of `cat`, but is a handy trick.
 
-	/files$ cat address.txt
+	/files $ cat address.txt
 	1600 Pennsylvania Avenue
 	Washington, DC 20500
 
 If you want to get serious and open a file in a text editor that comes built in to your terminal, you can try `atom`:
 
-	/files$ atom address.txt
+	/files $ atom address.txt
 
 How many lines are in names.txt?
 
-	/files$ wc -l names.txt
+	/files $ wc -l names.txt
 	18
 
 Regular expressions
@@ -317,13 +317,13 @@ When using something like `grep` to search, you can search for a simple term wit
 
 We won't worry about the ins and outs for now, but one useful operator is the period (.).  In regular expression-ese, this means "One of any character."  So you can search for something like:
 
-	/files$ grep -i "car.s" dictionary.txt
+	/files $ grep -i "car.s" dictionary.txt
 
 This would match words like `cards`,`carts`,`cares`, and so on.  It would also match the middle of the phrase "scar story" (CAR S) because "any character" means ANY character, including a space or a punctuation mark.
 
 One more example:
 
-	/files$ grep -i ".e.st" dictionary.txt
+	/files $ grep -i ".e.st" dictionary.txt
 
 This would match things like `least`,`beast`, and `heist`.
 
@@ -334,19 +334,19 @@ There are often lots of equally legitimate commands or combinations of commands 
 
 Example:
 
-	/files$ head -n 12 names.txt | tail -n 5
+	/files $ head -n 12 names.txt | tail -n 5
 	(Print out the first 12 lines, and then print out the last 5 lines of that)
 
 	is the same as
 
-	/files$ tail -n +7 names.txt | head -n 5
+	/files $ tail -n +7 names.txt | head -n 5
 	(Print out everything but the first 7 lines, then print the first 5 lines of that)
 
 	is pretty much the same as:
 
-	/files$ tail -n +7 names.txt > temporaryfile.txt
-	/files$ head -n 5 temporaryfile.txt
-	/files$ rm temporaryfile.txt
+	/files $ tail -n +7 names.txt > temporaryfile.txt
+	/files $ head -n 5 temporaryfile.txt
+	/files $ rm temporaryfile.txt
 	(Save everything but the first 7 lines to a temporary file, then print the first 5 lines of that, then delete the temporary file)
 
 ---
