@@ -60,24 +60,6 @@ To print out the matching line, the 4 lines BEFORE it and the 4 lines AFTER it
 
   grep -C 4 "Howard" famousducks.txt
 
-To search for "McDuck" in every file in the current directory, use the `*`
-wildcard in the path.
-
-  grep "McDuck" *
-
-To search for "McDuck" in every file in the current directory AND its
-subdirectories, use the `-r` flag.
-
-  grep -r "McDuck" *
-
-To print out the filenames instead of the matching lines, use the `-l` flag:
-
-  grep -l "Daffy" *
-
-To print out the number of matches, use the `-c` flag:
-
-  grep -c "Daffy" *
-
 To print the line numbers along with the matching lines, use the `-n` flag:
 
   grep -n "Daffy" famousducks.txt
