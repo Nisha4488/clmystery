@@ -1,3 +1,12 @@
+The cat command
+---------------
+
+The `cat` command concatenates one or more files together and prints their
+combined contents to the Terminal:
+
+	cat turkey.txt duck.txt chicken.txt
+
+
 The head command
 ----------------
 
@@ -7,11 +16,7 @@ The `head` command prints the first 10 lines of a file:
 
 To print a different number of lines, use the `-n` flag:
 
-  head -n 15 names.txt
-
-To print all the lines excluding the LAST 15, add a minus sign to the count:
-
-  head -n -15 names.txt
+  head -n 20 names.txt
 
 
 The tail command
@@ -23,47 +28,43 @@ The `tail` command prints the last 10 lines of a file:
 
 To print a different number of lines, use the `-n` flag:
 
-  tail -n 15 names.txt
-
-To print all the lines excluding the FIRST 15, add a plus sign to the count:
-
-  tail -n +15 names.txt
+  tail -n 20 names.txt
 
 
 The grep command
 ----------------
 
-The `grep` command searches a one or more files for a case-sensitive phrase:
+The `grep` command searches a one or more files for a case-sensitive pattern:
 
-  grep "Donald" famousducks.txt
-
-To search for a case-insensitive phrase (i.e. "donald"), use the `-i` flag:
-
-  grep -i "Donald" famousducks.txt
+  grep Donald famousducks.txt
 
 To search for the exact word "Donald" (i.e. not "McDonald"), use the `-w` flag:
 
-  grep -w "Donald" famousducks.txt
+  grep -w Donald famousducks.txt
 
 To print out the matching line and the 4 lines AFTER it (5 lines total), use
 the `-A` flag:
 
-  grep -A 4 "Howard" famousducks.txt
+  grep -A 4 Howard famousducks.txt
 
 To print out the matching line and the 4 lines BEFORE it (5 lines total), use
 the `-B` flag:
 
-  grep -B 4 "Howard" famousducks.txt
+  grep -B 4 Howard famousducks.txt
 
 To print out the matching line, the 4 lines BEFORE it and the 4 lines AFTER it
 (9 lines total), use the `-C` flag:
 
-  grep -C 4 "Howard" famousducks.txt
+  grep -C 4 Howard famousducks.txt
 
-To print the line numbers along with the matching lines, use the `-n` flag:
+To print out the matching line, the 3 lines BEFORE it and the 4 lines AFTER it
+(8 lines total), use the `-A` and `-B` flags together:
 
-  grep -n "Daffy" famousducks.txt
+  grep -B 3 -A 4 Howard famousducks.txt
 
+To print out the number of matches, use the `-c` flag:
+
+  grep -c Daffy famousducks.txt
 
 Redirecting output to a file
 ----------------------------
@@ -84,12 +85,12 @@ Piping output to a command
 
 To pipe the output of a command to the input of another, use the `|` character.
 
-  head names.txt | grep "Steve"
+  head names.txt | grep Steve
 
 This is basically the same as doing:
 
   head names.txt > temporaryfile.txt
-  grep "Steve" temporaryfile.txt
+  grep Steve temporaryfile.txt
   rm temporaryfile.txt
 
 Instead of first redirecting the output of `head` to a file and then running
@@ -98,8 +99,8 @@ the second.
 
 Commands can be chained together using multiple pipes:
 
-  grep "United States" addresses.csv | grep "California" | head
+  grep "United States" addresses.csv | grep California | head
 
-This would search the `addresses.csv` file for lines that contain the phrase
-"United States", then search those results for lines that contain the phrase
+This would search the `addresses.csv` file for lines that contain the pattern
+"United States", then search those results for lines that contain the pattern
 "California", and then print out the first 10 of those matches.
