@@ -1,31 +1,40 @@
-Solve this murder mystery using only command line programs.
+Your objective is to solve this murder mystery using only command line
+programs. In the `tips` file, you'll find documentation on some of the
+commands that are most likely to be of help to you:
 
-To figure out who-done-it, go to the 'mystery' subdirectory and start
-collecting all the clues from the 'crimescene' file.
+  less tips
 
-The officers on the scene were super meticulous and wrote down EVERYTHING in
-their reports. Fortunately, their sergeant went through and marked the real
-clues with the word "CLUE" in all caps.
-
-Refer to the `cheatsheet` file for some tips on commands and concepts you may
-find useful:
-
-  less cheatsheet
-
-The `less` command will print the contents of the `cheatsheet` file to the
-Terminal one page at a time. When working in `less`:
+The `less` command will print the contents of a file to the Terminal one page
+at a time. When working in `less`:
 
 - Press the Up and Down arrow keys to scroll one line at a time.
-- Press the F and B keys to scroll one page at a time.
+- Press the Page Up and Page Down keys to scroll one page at a time.
 - Press the Q key to quit and return to the shell.
 
-If you get stuck, you can read the files in the `hints` directory, which are
-ordered from least to most damaging.
+Regarding the murder, the officers at the crime scene were super meticulous and
+wrote down EVERYTHING in their reports. However, their sergeant went through the
+`mystery/crimescene` file and marked the real clues with the word "CLUE" in all
+capital letters.
 
-When you think you've solved the mystery, execute the following command from
-inside the project root (i.e. the 'clmystery' directory), replacing "John Doe"
-with your suspect's name:
+The other files in the `mystery` directory are there to help you interview any
+witnesses and, ultimately, identify the murderer. If you get stuck, you can
+read the files in the `hints` directory.
+
+When you've identified the murderer, run the `check` command from inside the
+root `clmystery` directory, replacing "John Doe" with your suspect's name:
 
   ./check "John Doe"
+
+Using the `nano` command, to write down the commands you used to identify the
+murderer in the `solutions` file.
+
+  nano solution
+
+The `nano` command is a simple command line text editor. When working in `nano`:
+
+- Press Control-O to write out (i.e. save) the file.
+- Press Control-K to cut a line of text from the file.
+- Press Control-U to uncut a line of text into the file.
+- Press Control-X to exit the program and return to the shell.
 
 Good luck, detective!
