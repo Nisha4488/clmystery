@@ -1,3 +1,4 @@
-In order to track down our potential witness, you'll need to figure out where she lives.
+To interview your potential witness at their home, you'll need to figure out
+where she lives.
 
-Try using 'head' on some of the files like 'people' and 'vehicles' and see where we might find that.
+Use the `head` command on the `mystery/people` file to see how its structured.

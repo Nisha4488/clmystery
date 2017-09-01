@@ -1,9 +1,14 @@
-To find a matching license plate or car, use grep on the 'vehicles' file:
+Use the `grep` command to find a vehicle with a matching license plate, make,
+or color from the `mystery/vehicles` file:
 
-  grep "Honda" vehicles
+  grep L337 mystery/vehicles
 
-  grep "Blue" vehicles
+  grep Honda mystery/vehicles
 
-  grep "L337" vehicles
+  grep Blue mystery/vehicles
 
-This doesn't give you anything useful. Why not? Try using 'head' on the file to investigate its structure.
+This doesn't give you anything useful. Why not? Try using the `head` command on
+the file to investigate its structure. Then, see the `cheatsheet` file for more
+information on the `grep` command and its flags.
+
+  less cheatsheet

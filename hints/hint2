@@ -1,3 +1,5 @@
-Try using grep to search for the clues in the crimescene file:
+Use the `grep` command to search for clues in the `mystery/crimescene` file:
 
-  grep "CLUE" crimescene
+  grep CLUE mystery/crimescene
+
+See if you can uncover a name of someone who may have witnessed the crime.

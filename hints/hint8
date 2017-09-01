@@ -1,11 +1,8 @@
-To see who was a member of several different groups, you can combine their membership lists into one and search against that.
+To see who's a member of several different groups, combine the membership lists
+using the `cat` command and pipe its output into the `grep` command.
 
-  cat Fitness_Galaxy AAA United_MileagePlus | grep "John Smith"
+  cat AAA Fitness_Galaxy United_MileagePlus | grep "John Smith"
 
-If you only want to see the number of matches, you can use grep's -c option (the c must be lowercase):
+If you only want to see the number of matches, use the `grep` command's -c flag:
 
-  cat Fitness_Galaxy AAA United_MileagePlus | grep -c "John Smith"
-
-Or you can pipe the result to 'wc -l':
-
-  cat Fitness_Galaxy AAA United_MileagePlus | grep "John Smith" | wc -l
+  cat AAA Fitness_Galaxy United_MileagePlus | grep -c "John Smith"

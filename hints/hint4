@@ -1,5 +1,6 @@
-To find address for each Annabel, search through the 'people' file:
+To find the address for each Annabel, search through the `mystery/people` file:
 
-  grep "Annabel" people
+  grep Annabel mystery/people
 
-Notice that not all of the results are worth investigating. Remember what we know about Annabel.
+Remember, not all of these people are worth investigating. What you do you know
+about the actual witness?

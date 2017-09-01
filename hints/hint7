@@ -1,5 +1,10 @@
-In order to actually get information about vehicles that might match the description, you need to get multiple lines AROUND each match. Use the -A, -B or -C option with grep:
+To get useful information about a vehicle from the `grep` command, you'll need
+to include multiple lines around each match using the -A, -B, or -C flags:
 
-  grep -A 5 "L337" mystery/vehicles
+  grep -A 5 L337 mystery/vehicles
 
-This will match the license plates that contain "L337" and, for each match, show us the five lines AFTER it.
+This will match the license plates that contain L337 and, for each match, show
+the 5 lines AFTER it. See the `cheatsheet` file for more information about each 
+of these flags.
+
+  less cheatsheet

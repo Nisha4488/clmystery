@@ -1,5 +1,8 @@
-"Interview" the two possible witnesses by reading the correct line from the streets they live on:
+To interview the two possible witnesses, use the `head` and `tail` command to
+read the correct line from their corresponding street file:
 
-  head -n 173 streets/Mattapan_Street | tail -n 1
+  head -n 173 mystery/streets/Mattapan_Street | tail -n 1
 
-This will give you just line 173 of Mattapan street, because it'll take the first 173 lines and then take the last line from those.
+This command sequence will print line 173 of Mattapan street. The `head`
+command prints out the first 173 lines and the `tail` command will print the
+last line of those.

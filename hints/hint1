@@ -1,5 +1,5 @@
-Try poking around what's in a file by using the 'head' command:
+Use the `head` command to peek inside the files in the `mystery` directory:
 
-  head -n 20 people
+  head -n 20 mystery/people
 
-This will show you the first 20 lines of the 'people' file.
+For example, this will print the first 20 lines of the `mystery/people` file.
